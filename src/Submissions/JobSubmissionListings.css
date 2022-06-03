@@ -1,0 +1,50 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+   background-color: #f5f2ee;
+   float: left;
+   margin: 20px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.container {
+    max-width: 1300px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.pricing-table .package-col {
+    background-color: #f5f2ee;
+    margin: 0 .5% 60px;
+    padding: 30px 15px;
+    max-width: 400px;
+    }
+
+   @media (min-width: 1400px)
+   .pricing-table .package-col.col-md-3 {
+       width: 24%;
+   }
