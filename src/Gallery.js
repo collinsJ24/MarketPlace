@@ -33,7 +33,7 @@ return (
         <div className="gallery" id="gallery">
         {gallery.map((image) => (
             <div className="gallery-item">
-                <div class="content"><img src={image.image} alt=""/></div>
+                <div className="content"><img src={image.image} alt=""/></div>
             </div> ))}
         </div>
 
