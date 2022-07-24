@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import { useState } from 'react';
 import JobSubmissionsListings from './Submissions/JobSubmissionsListings'
+import Login from 'Login/Login';
 import Form from './Submissions/Form'
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
       <Route path='/' element={<Home/>} />
 <Route path='/submissionListing' element={<JobSubmissionsListings />} />
+<Route path='/login' element={<Login />} />
 <Route path='/silverjob' element={<Form />} />
         </Routes>
   </BrowserRouter>

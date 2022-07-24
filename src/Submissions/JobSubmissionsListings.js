@@ -10,30 +10,39 @@ function JobSubmissionsListings() {
   return (
   <body>
   <Title/>
+   <div className="sidebar-container">
+    <div className="widget">
+    <div class="job-buttons">
+    	<a href="/post-a-job-opening/"><img src="https://www.ranchwork.com/wp-content/uploads/Post-a-Job.png" alt="Post a Job" width="205" height="205"/></a>
+    	<a href="/edit-remove/"><img src="https://www.ranchwork.com/wp-content/uploads/Edit-or-Remove-a-Job.png" alt="Edit or Remove a Job" width="300" height="89"/></a>
+    	<a href="/post-a-job-wanted/"><img src="https://www.ranchwork.com/wp-content/uploads/Post-a-Job-Wanted.png" alt="Post a Job Wanted" width="124" height="124"/></a>
+    </div>
+    </div>
+    </div>
   <div className="container">
   <div className="card">
-    <h1>Free Job Listing</h1>
+    <h1>Free</h1>
     <p className="price">Free</p>
     <p>Some text about the contents of this listing</p>
-    <p><button>Add to Cart</button></p>
+    <p><a className="button" href="silverjob">Add to Cart</a></p>
   </div>
   <div className="card">
-      <h1>Silver Job Listing</h1>
+      <h1>Silver</h1>
       <p className="price">$35</p>
       <p>Some text about the contents of this listing</p>
       <p><a className="button" href="silverjob">Add to Cart</a></p>
     </div>
     <div className="card">
-          <h1>Gold Job Listing</h1>
+          <h1>Gold</h1>
           <p className="price">$95</p>
           <p>Some text about the contents of this listing</p>
-          <p><button>Add to Cart</button></p>
+         <p><a className="button" href="silverjob">Add to Cart</a></p>
         </div>
         <div className="card">
-              <h1>Platinum Job Listing</h1>
+              <h1>Platinum</h1>
               <p className="price">$135</p>
               <p>Some text about the contents of this listing</p>
-              <p><button>Add to Cart</button></p>
+              <p><a className="button" href="silverjob">Add to Cart</a></p>
             </div>
     </div>
 
