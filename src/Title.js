@@ -29,16 +29,16 @@ const [isMenuSet, setMenu] = useState(false);
        </ul>
      </div>
      </nav>
-      <div className="banner-area" id="home"></div>
+      <div className="banner-area" id="home">
 
-{isMenuSet && (
-<div className="menuParent">
-<div className="menuIcon" onClick={handleClick}>
-  <span className="icon icon-bars"></span>
-  <span className="icon icon-bars overlay"></span>
-</div>
-</div>
-)}
+      </div>
+
+ <div className="menuParent">
+      <div className="menuIcon" onClick={handleClick}>
+        <span className="icon icon-bars"></span>
+        <span className="icon icon-bars overlay"></span>
+      </div>
+      </div>
 
  {isMenuSet && (
 <div className="overlay-menu">

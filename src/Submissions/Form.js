@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import './Form.css';
 import { useState } from 'react';
 import Title from "../Title";
@@ -10,12 +11,13 @@ const [title, setTitle] = useState("");
   const [phone, setPhone] = useState("");
   const [url, setUrl] = useState("");
   const [description, setDescription] = useState("");
+    const navigate = useNavigate();
 
 console.log(props.featuredDetails);
  let sendSubmission = async (e) => {
     e.preventDefault();
     try {
-    console.log("sendign request");
+    console.log("sending request");
       let res = await fetch("http://localhost:8080/gallery/submission", {
         method: "POST",
         headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
@@ -24,7 +26,8 @@ console.log(props.featuredDetails);
           email: email,
           phone: phone,
           url: url,
-          description: description
+          description: description,
+          featured: props.featuredDetails
         }),
       });
       let resJson = await res.json();
@@ -32,6 +35,7 @@ console.log(props.featuredDetails);
         setTitle("");
         setEmail("");
         setUrl("");
+        navigate("/");
       } else {
         setUrl("Some error occured");
       }
