@@ -49,6 +49,10 @@
 .gallery .content {
   padding: 4px;
 }
+
+.gallery2 .content2 {
+  padding: 4px;
+}
 .gallery .gallery-item {
   transition: grid-row-start 300ms linear;
   transition: transform 300ms ease;
@@ -56,6 +60,15 @@
   cursor: pointer;
 }
 .gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+.gallery2 .gallery-item2 {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery2 .gallery-item2:hover {
   transform: scale(1.025);
 }
 @media (max-width: 600px) {

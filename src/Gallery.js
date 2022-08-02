@@ -6,7 +6,7 @@ function Gallery (props) {
 
  const fetchImages = async () => {
     return await fetch(
-      "http://localhost:8080/gallery/images"
+      "http://localhost:8080/gallery/listings"
     )
       .then((response) => {
         return response.json();
@@ -14,7 +14,8 @@ function Gallery (props) {
       .then((data) => {
         const galleryImages = data.map((images) => {
           return {
-            image: images.image
+            image: images.url,
+            featured: images.featured
           };
         });
         console.log(galleryImages);
@@ -30,10 +31,17 @@ return (
     <body>
         <h1></h1>
 
+         <div className="gallery2" id="gallery2">
+          {gallery.filter(listing => listing.featured === true).map(featured => (
+            <div className="gallery-item2">
+               <div className="content2"><img src={featured.image} alt=""/></div>
+               </div>
+          ))}
+        </div>
         <div className="gallery" id="gallery">
-        {gallery.map((image) => (
+       {gallery.filter(listing => listing.featured === false).map(nonFeatured => (
             <div className="gallery-item">
-                <div className="content"><img src={image.image} alt=""/></div>
+                <div className="content"><img src={nonFeatured.image} alt=""/></div>
             </div> ))}
         </div>
 

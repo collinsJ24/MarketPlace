@@ -24,25 +24,25 @@ function JobSubmissionsListings() {
     <h1>Free</h1>
     <p className="price">Free</p>
     <p>Some text about the contents of this listing</p>
-    <p><a className="button" href="silverjob">Add to Cart</a></p>
+    <p><a className="button" href="submission">Add to Cart</a></p>
   </div>
   <div className="card">
       <h1>Silver</h1>
       <p className="price">$35</p>
       <p>Some text about the contents of this listing</p>
-      <p><a className="button" href="silverjob">Add to Cart</a></p>
+      <p><a className="button" href="submissionSilver">Add to Cart</a></p>
     </div>
     <div className="card">
           <h1>Gold</h1>
           <p className="price">$95</p>
           <p>Some text about the contents of this listing</p>
-         <p><a className="button" href="silverjob">Add to Cart</a></p>
+         <p><a className="button" href="submissionGold">Add to Cart</a></p>
         </div>
         <div className="card">
               <h1>Platinum</h1>
               <p className="price">$135</p>
               <p>Some text about the contents of this listing</p>
-              <p><a className="button" href="silverjob">Add to Cart</a></p>
+              <p><a className="button" href="submissionPlatinum">Add to Cart</a></p>
             </div>
     </div>
 

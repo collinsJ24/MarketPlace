@@ -15,7 +15,10 @@ const App = () => {
       <Route path='/' element={<Home/>} />
 <Route path='/submissionListing' element={<JobSubmissionsListings />} />
 <Route path='/login' element={<Login />} />
-<Route path='/silverjob' element={<Form />} />
+<Route path='/submission' element={<Form featuredDetails= {false} />} />
+<Route path='/submissionSilver' element={<Form featuredDetails= {true} />} />
+<Route path='/submissionGold' element={<Form featuredDetails= {true} />} />
+<Route path='/submissionPlatinum' element={<Form featuredDetails= {true} />} />
         </Routes>
   </BrowserRouter>
     </div>
