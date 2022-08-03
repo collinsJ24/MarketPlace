@@ -5,6 +5,7 @@ import { useState } from 'react';
 import JobSubmissionsListings from './Submissions/JobSubmissionsListings'
 import Login from 'Login/Login';
 import Form from './Submissions/Form'
+import Listing from 'Listing/Listing';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
 <Route path='/submissionSilver' element={<Form featuredDetails= {true} />} />
 <Route path='/submissionGold' element={<Form featuredDetails= {true} />} />
 <Route path='/submissionPlatinum' element={<Form featuredDetails= {true} />} />
+<Route path='/listing' element={<Listing />} />
         </Routes>
   </BrowserRouter>
     </div>
