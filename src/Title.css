@@ -54,15 +54,21 @@ header {
   }
 
 .navbar ul {
-  display: inline-block;
-  float: right;
-  list-style: none;
-  /* margin-right: 14px; */
-  margin-top: 10px;
-  text-align: right;
-  transition: transform 0.5s ease-out;
-  -webkit-transition: transform 0.5s ease-out;
-} @media(max-width: 640px) {
+      display: inline-block;
+      /* float: right; */
+      /* list-style: none; */
+      /* margin-right: 14px; */
+      /* margin-top: 10px; */
+      /* text-align: right; */
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+      /* padding: 0; */
+      /* margin: 0; */
+      /* list-style: none; */
+      position: fixed;
+}
+
+@media(max-width: 640px) {
     .navbar ul {
       display: none;
     }
@@ -73,16 +79,16 @@ header {
     }
 
 .navbar li {
+margin-right: 30px;
   display: inline-block;
 }
 
 .navbar li a {
-  color: rgb(13, 26, 38);
+  color: white;
   display: block;
   font-size: 0.7em;
   height: 50px;
   letter-spacing: 1px;
-  margin: 0 20px;
   padding: 0 4px;
   position: relative;
   text-decoration: none;
@@ -96,6 +102,21 @@ header {
   color: rgb(28, 121, 184);
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
+}
+
+.a-login {
+  color: white;
+  display: block;
+  font-size: 0.7em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 /* Animated Bottom Line */
@@ -292,10 +313,32 @@ header {
           padding: 1px;
 }
 
+.overlay-menu-login {
+      background: #e6e4e4;
+      left: 0px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+          font-family: AlegreyaSansSC,Helvetica,Arial,sans-serif;
+          font-size: 19px;
+          font-size: 1.9rem;
+          letter-spacing: 1px;
+          line-height: 1;
+          color: #fff;
+          display: block;
+          padding: 1px;
+}
+
 .overlay-menu ul, .overlay-menu li {
   display: block;
   position: relative;
   text-align: center;
+}
+
+.overlay-menu-login ul, .overlay-menu-login li {
+  display: block;
+  text-align: center;
+  text-align-last: start;
 }
 
 .overlay-menu li a {
@@ -319,7 +362,7 @@ header {
 
 .logo {
   flex: 1 1 auto;
-  margin-left: 10%;
+  margin-left: -10%;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -328,7 +371,6 @@ header {
 
 
 a {
-  margin: 15px;
       color: white;
       text-decoration: none;
       font-weight: bold;

@@ -62,7 +62,8 @@
           padding: 30px 15px;
           max-width: 400px;
           margin: 0 .5%;
-          width: 24%;
+          width: 48%;
+          margin-bottom: 20px;
 }
 @media screen and (max-width: 800px) {
 .card {
@@ -126,12 +127,11 @@
           min-height: 1px;
           float: left;
           background-color: #f5f2ee;
-          padding: 30px 15px;
+          margin: 20px;
           max-width: 400px;
           width: 90%;
           display: block;
-          margin: 0 .5%;
-
+          font-style: italic;
 }
 }
 

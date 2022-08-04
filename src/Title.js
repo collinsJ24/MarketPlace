@@ -5,12 +5,19 @@ import { CgProfile } from 'react-icons/cg';
 function Title(props) {
 
 const [isMenuSet, setMenu] = useState(false);
-
+const [isProfileDropdownSet, setProfileDropdown] = useState(false);
+const [selectedOption, setSelectedOption] = useState("");
  const handleClick = event => {
     console.log("clicked");
     setMenu(!isMenuSet);
 
   };
+
+   const handleLoginClick = event => {
+      console.log("Profile dropdown clicked");
+      setProfileDropdown(!isProfileDropdownSet);
+
+    };
 
   return (
   <header>
@@ -21,9 +28,19 @@ const [isMenuSet, setMenu] = useState(false);
          <li><a href="submissionListing">Post Submission</a></li>
          <li><a href="#about">About</a></li>
          <li><a href="#contact">Contact</a></li>
-         <li>
-         <a href="/login">
-          <CgProfile size={30} /></a>
+         <li onClick={handleLoginClick}>
+         <a href="#login">
+          <CgProfile size={30} />
+          </a>
+          {isProfileDropdownSet && (
+          <div className="overlay-menu-login">
+            <ul className="menu">
+                          <li><a href="/login">Login</a></li>
+                          <li><a href="#">Plugins</a></li>
+                          <li><a href="#">Tutorials</a></li>
+                      </ul>
+                      </div>
+                      )}
          </li>
        </ul>
      </div>
