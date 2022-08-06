@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+}
+
+.signed-out-hero {
+  flex-direction: column;
+  height: 200px;
+  position: relative;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 50px 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.signed-out-hero .hero-categories {
+  z-index: 2;
+  order: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+.filter-categories:not(.allow-overflow) {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.filter-categories {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filter-categories:not(.allow-overflow) ul {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.filter-categories ul {
+  padding: 0 2px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+.filter-categories .category {
+  display: inline-block;
+}
+
+.signed-out-hero .hero-category a,
+.signed-out-hero .hero-category.active a {
+  margin: 0 5px;
+  padding: 16px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.signed-out-hero .hero-category.active a, .signed-out-hero .hero-category a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.filter-categories .category.active a, .filter-categories .category a:hover {
+    transition: color 200ms ease;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+}
+
+.filter-categories .category a:after {
+  content: attr(title);
+  display: block;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  font-weight: 500;
+}

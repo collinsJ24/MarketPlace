@@ -65,7 +65,7 @@ header {
       /* padding: 0; */
       /* margin: 0; */
       /* list-style: none; */
-      position: fixed;
+      position: absolute;
 }
 
 @media(max-width: 640px) {
@@ -339,6 +339,7 @@ margin-right: 30px;
   display: block;
   text-align: center;
   text-align-last: start;
+  font-size: 20px;
 }
 
 .overlay-menu li a {
@@ -367,6 +368,19 @@ margin-right: 30px;
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 35px;
+}
+
+.profile {
+   color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: uppercase;
+        cursor: pointer;
+}
+
+.profile:hover {
+    color: #000;
 }
 
 

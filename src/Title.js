@@ -28,10 +28,8 @@ const [selectedOption, setSelectedOption] = useState("");
          <li><a href="submissionListing">Post Submission</a></li>
          <li><a href="#about">About</a></li>
          <li><a href="#contact">Contact</a></li>
-         <li onClick={handleLoginClick}>
-         <a href="#login">
+         <li className="profile" onClick={handleLoginClick}>
           <CgProfile size={30} />
-          </a>
           {isProfileDropdownSet && (
           <div className="overlay-menu-login">
             <ul className="menu">

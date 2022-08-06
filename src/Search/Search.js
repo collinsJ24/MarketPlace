@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import './Search.css';
-import { FaSearch } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const Search = () => {
 
   return (
-  <div class="wrapper">
       <div class="searchBar">
-      <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
-      <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
-      <FaSearch size={30}/>
+      <input className="searchTerm" type="text" name="searchQueryInput" placeholder="Search" />
+      <button className="searchButton" type="submit" name="searchQuerySubmit">
+      <FontAwesomeIcon icon={ faSearch }/>
       </button>
-    </div>
   </div>
   );
 }
