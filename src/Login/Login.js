@@ -17,6 +17,8 @@ const [selectedOption, setSelectedOption] = useState([]);
    const [password, setPassword] = useState("");
    const [success, setSuccess] = useState(false);
 
+   const [userData, setUserData] = useState([]);
+
    // Handling the form submission
    const requestOptions = {
     method: 'POST',
@@ -55,20 +57,33 @@ const [rememberMe, setRememberMe] = useState(false);
     refreshTokenSetup(res);
     setEmail(res.profileObj.email);
     setName(res.profileObj.name);
-    sendLogin();
+    sendLogin(res.profileObj.email,res.profileObj.name);
 
   };
 
-  let sendLogin = () => {
+  let sendLogin = async (email, name) => {
+  console.log(userData);
       try {
-      console.log("sendign request");
-        fetch("http://localhost:8080/api/auth/signup/google", {
+      console.log("sending request");
+      console.log(name);
+      console.log(email);
+        let res = await fetch("http://localhost:8080/api/auth/signup/google", {
           method: "POST",
           headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
           body: JSON.stringify({
            name: name, email: email
           }),
         });
+        let resJson = await res.json();
+        console.log(resJson);
+         if (res.status === 200) {
+         let userData = [];
+         userData.id = resJson.id;
+         userData.name = resJson.name;
+                setUserData(userData);
+              } else {
+                console.log("Some error occured");
+              }
       } catch (err) {
         console.log(err);
       }
